@@ -13,7 +13,14 @@ for the demonstration project.
 
 ### Using the Asset Library
 
-TODO (not uploaded yet).
+- Open the Godot editor.
+- Navigate to the **AssetLib** tab at the top of the editor and search for
+  "lod".
+- Install the
+  [*InterpolatedCamera3D*](https://godotengine.org/asset-library/asset/739)
+  plugin. Keep all files checked during installation.
+- In the editor, open **Project > Project Settings**, go to **Plugins**
+  and enable the **InterpolatedCamera3D** plugin.
 
 ### Manual installation
 
