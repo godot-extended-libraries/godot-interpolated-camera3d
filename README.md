@@ -6,7 +6,7 @@ over smoothing by letting you use different factors for translation, rotation,
 FOV changes, and near/far plane changes.
 
 This repository only contains the add-on. See
-[Calinou/godot-interpolated-camera3d-demo](https://github.com/Calinou/godot-interpolated-camera3d-demo)
+[godot-extended-libraries/godot-interpolated-camera3d-demo](https://github.com/godot-extended-libraries/godot-interpolated-camera3d-demo)
 for the demonstration project.
 
 ## Installation
@@ -23,11 +23,11 @@ Manual installation lets you use pre-release versions of this add-on by followin
 1. Clone this Git repository:
 
 ```bash
-git clone https://github.com/Calinou/godot-interpolated-camera3d.git
+git clone https://github.com/godot-extended-libraries/godot-interpolated-camera3d.git
 ```
 
 Alternatively, you can
-[download a ZIP archive](https://github.com/Calinou/godot-interpolated-camera3d/archive/master.zip)
+[download a ZIP archive](https://github.com/godot-extended-libraries/godot-interpolated-camera3d/archive/master.zip)
 if you do not have Git installed.
 
 2. Move the `addons/` folder to your project folder.
