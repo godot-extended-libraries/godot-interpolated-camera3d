@@ -5,6 +5,10 @@ This add-on restores a node similar to the built-in InterpolatedCamera3D
 over smoothing by letting you use different factors for translation, rotation,
 FOV changes, and near/far plane changes.
 
+Note that this add-on is *not* a 100% compatible drop-in replacement to the
+InterpolatedCamera3D node, as this add-on provides some features that are
+backwards-incompatible.
+
 This repository only contains the add-on. See
 [godot-extended-libraries/godot-interpolated-camera3d-demo](https://github.com/godot-extended-libraries/godot-interpolated-camera3d-demo)
 for the demonstration project.
