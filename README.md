@@ -1,5 +1,9 @@
 # InterpolatedCamera3D add-on
 
+**This add-on is only compatible with Godot 4.0 (`master` branch), not 3.2.x.**
+
+___
+
 This add-on restores a node similar to the built-in InterpolatedCamera3D
 (which is being removed in Godot 4.0). On top of that, it provides more control
 over smoothing by letting you use different factors for translation, rotation,
