@@ -1,4 +1,4 @@
-# Copyright © 2020 Hugo Locurcio and contributors - MIT License
+# Copyright © 2020-2021 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 extends Camera3D
 class_name InterpolatedCamera3D
@@ -38,11 +38,11 @@ func _process(delta: float) -> void:
 	var target_xform := target_node.get_global_transform()
 	# Interpolate the origin and basis separately so we can have different translation and rotation
 	# interpolation speeds.
-	var local_transform_only_origin := Transform(Basis(), get_global_transform().origin)
-	var local_transform_only_basis := Transform(get_global_transform().basis, Vector3())
+	var local_transform_only_origin := Transform3D(Basis(), get_global_transform().origin)
+	var local_transform_only_basis := Transform3D(get_global_transform().basis, Vector3())
 	local_transform_only_origin = local_transform_only_origin.interpolate_with(target_xform, translate_factor)
 	local_transform_only_basis = local_transform_only_basis.interpolate_with(target_xform, rotate_factor)
-	set_global_transform(Transform(local_transform_only_basis.basis, local_transform_only_origin.origin))
+	set_global_transform(Transform3D(local_transform_only_basis.basis, local_transform_only_origin.origin))
 
 	if target_node is Camera3D:
 		var camera := target_node as Camera3D

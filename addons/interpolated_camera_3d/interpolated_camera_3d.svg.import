@@ -2,7 +2,8 @@
 
 importer="texture"
 type="StreamTexture2D"
-path="res://.import/interpolated_camera_3d.svg-a9f084fb38558ada3c63379b69457ab3.stex"
+uid="uid://e5mv3ytuj0u6"
+path="res://.godot/imported/interpolated_camera_3d.svg-a9f084fb38558ada3c63379b69457ab3.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://addons/interpolated_camera_3d/interpolated_camera_3d.svg"
-dest_files=[ "res://.import/interpolated_camera_3d.svg-a9f084fb38558ada3c63379b69457ab3.stex" ]
+dest_files=["res://.godot/imported/interpolated_camera_3d.svg-a9f084fb38558ada3c63379b69457ab3.stex"]
 
 [params]
 
@@ -27,7 +28,7 @@ roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/invert_color=false
+process/normal_map_invert_y=false
 process/HDR_as_SRGB=false
 process/size_limit=0
 detect_3d/compress_to=1
