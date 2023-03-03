@@ -1,8 +1,8 @@
 # Copyright © 2020-2021 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
+@icon("interpolated_camera_3d.svg")
 extends Camera3D
 class_name InterpolatedCamera3D
-@icon("interpolated_camera_3d.svg")
 
 # The factor to use for asymptotical translation lerping.
 # If 0, the camera will stop moving. If 1, the camera will move instantly.
@@ -24,7 +24,7 @@ class_name InterpolatedCamera3D
 
 # The node to target.
 # Can optionally be a Camera3D to support smooth FOV and Z near/far plane distance changes.
-@export_node_path(Node3D) var target: NodePath
+@export_node_path("Node3D") var target: NodePath
 
 
 func _process(delta: float) -> void:
