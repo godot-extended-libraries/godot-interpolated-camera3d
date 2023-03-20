@@ -1,11 +1,12 @@
 # InterpolatedCamera3D add-on
 
-**This add-on is only compatible with Godot 4.0 (`master` branch), not 3.2.x.**
-
+> **Warning**
+>
+> This add-on is only compatible with Godot 4, not 3.x.
 ___
 
 This add-on restores a node similar to the built-in InterpolatedCamera3D
-(which is being removed in Godot 4.0). On top of that, it provides more control
+(which was removed in Godot 4.0). On top of that, it provides more control
 over smoothing by letting you use different factors for translation, rotation,
 FOV changes, and near/far plane changes.
 
@@ -62,7 +63,7 @@ if you do not have Git installed.
 
 ## License
 
-Copyright © 2020-2021 Hugo Locurcio and contributors
+Copyright © 2020-present Hugo Locurcio and contributors
 
 Unless otherwise specified, files in this repository are licensed under the
 MIT license. See [LICENSE.md](LICENSE.md) for more information.

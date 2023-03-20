@@ -1,4 +1,4 @@
-# Copyright © 2020-2021 Hugo Locurcio and contributors - MIT License
+# Copyright © 2020-present Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 @icon("interpolated_camera_3d.svg")
 extends Camera3D
@@ -24,18 +24,17 @@ class_name InterpolatedCamera3D
 
 # The node to target.
 # Can optionally be a Camera3D to support smooth FOV and Z near/far plane distance changes.
-@export_node_path("Node3D") var target: NodePath
+@export var target: Node3D
 
 
 func _process(delta: float) -> void:
-	if not has_node(target):
+	if not target is Node3D:
 		return
 
 	# TODO: Fix delta calculation so it behaves correctly if the speed is set to 1.0.
 	var translate_factor := translate_speed * delta * 10
 	var rotate_factor := rotate_speed * delta * 10
-	var target_node := get_node(target) as Node3D
-	var target_xform := target_node.get_global_transform()
+	var target_xform := target.get_global_transform()
 	# Interpolate the origin and basis separately so we can have different translation and rotation
 	# interpolation speeds.
 	var local_transform_only_origin := Transform3D(Basis(), get_global_transform().origin)
@@ -44,8 +43,8 @@ func _process(delta: float) -> void:
 	local_transform_only_basis = local_transform_only_basis.interpolate_with(target_xform, rotate_factor)
 	set_global_transform(Transform3D(local_transform_only_basis.basis, local_transform_only_origin.origin))
 
-	if target_node is Camera3D:
-		var camera := target_node as Camera3D
+	if target is Camera3D:
+		var camera := target as Camera3D
 		# The target node can be a Camera3D, which allows interpolating additional properties.
 		# In this case, make sure the "Current" property is enabled on the InterpolatedCamera3D
 		# and disabled on the Camera3D.
