@@ -31,9 +31,8 @@ func _process(delta: float) -> void:
 	if not target is Node3D:
 		return
 
-	# TODO: Fix delta calculation so it behaves correctly if the speed is set to 1.0.
-	var translate_factor := translate_speed * delta * 10
-	var rotate_factor := rotate_speed * delta * 10
+	var translate_factor := 1 - pow(1 - translate_speed, delta * 3.45233)
+	var rotate_factor := 1 - pow(1 - rotate_speed, delta * 3.45233)
 	var target_xform := target.get_global_transform()
 	# Interpolate the origin and basis separately so we can have different translation and rotation
 	# interpolation speeds.
@@ -50,8 +49,8 @@ func _process(delta: float) -> void:
 		# and disabled on the Camera3D.
 		if camera.projection == projection:
 			# Interpolate the near and far clip plane distances.
-			var near_far_factor := near_far_speed * delta * 10
-			var fov_factor := fov_speed * delta * 10
+			var near_far_factor := 1 - pow(1 - near_far_speed, delta * 3.45233)
+			var fov_factor := 1 - pow(1 - fov_speed, delta * 3.45233)
 			var new_near := lerp(near, camera.near, near_far_factor) as float
 			var new_far := lerp(far, camera.far, near_far_factor) as float
 
