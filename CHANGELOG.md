@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
+### Fixed
 
-- Fixed interpolation being FPS-dependent
+- Interpolation is no longer FPS-dependent. It now matches the previous behavior at 60 Hz regardless of the rendered framerate.
 
 ## [1.1.1] - 2023-03-20
 
